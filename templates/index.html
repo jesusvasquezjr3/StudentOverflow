@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Preguntas destacadas</p>
+                <p class="text-[#637488] text-sm font-normal leading-normal">Explora las preguntas más populares y recientes de nuestra comunidad.</p>
+            </div>
+        </div>
+        
+        <div class="px-4 py-3">
+          </div>
+        <div class="pb-3">
+            <div class="flex border-b border-[#dce0e5] px-4 gap-8">
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637488] pb-[13px] pt-4" href="#">
+                    <p class="text-sm font-bold">Popular</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#111418] text-[#111418] pb-[13px] pt-4" href="#">
+                    <p class="text-sm font-bold">Reciente</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#637488] pb-[13px] pt-4" href="#">
+                    <p class="text-sm font-bold">Sin respuesta</p>
+                </a>
+            </div>
+        </div>
+
+        {% if questions %}
+            {% for question in questions %}
+            <div class="p-4 border-b border-gray-200">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex flex-col gap-1 flex-grow">
+                        <div class="text-xs text-gray-500">
+                            {% for tag in question.tags %}
+                                <a href="#" class="hover:underline">{{ tag.name }}</a>{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        </div>
+                        <a href="{{ url_for('questions.view_question', question_id=question.id) }}" class="text-[#111418] text-lg font-bold leading-tight hover:underline">
+                            {{ question.title }}
+                        </a>
+                        <p class="text-[#637488] text-sm font-normal leading-normal">
+                           {{ question.body | truncate(200) }}
+                        </p>
+                        <p class="text-xs text-gray-400 mt-2">
+                           Preguntado por <a href="#" class="font-medium text-blue-500 hover:underline">{{ question.author.username }}</a>
+                           hace {{ question.created_at.strftime('%Y-%m-%d') }}
+                        </p>
+                    </div>
+                    </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="p-4 text-center text-gray-500">
+                <p>Aún no hay preguntas. ¡Sé el primero en hacer una!</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
