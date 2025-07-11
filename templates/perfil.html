@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Perfil de {{ user_profile.username }} - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="gap-1 px-6 flex flex-1 justify-center py-5">
+    <aside class="layout-content-container flex flex-col w-80">
+      <div class="flex h-full flex-col justify-between bg-white p-4">
+        <div class="flex flex-col gap-4">
+          <h1 class="text-[#121416] text-base font-medium leading-normal">Menú</h1>
+          <nav class="flex flex-col gap-2">
+            <a href="{{ url_for('main.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#f1f2f4]">
+                <p class="text-[#121416] text-sm font-medium leading-normal">Inicio</p>
+            </a>
+            <a href="{{ url_for('profile.view_profile') }}" class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[#f1f2f4]">
+                <p class="text-[#121416] text-sm font-medium leading-normal">Perfil</p>
+            </a>
+            </nav>
+        </div>
+        <div class="flex flex-col gap-1">
+            <a href="{{ url_for('auth.logout') }}" class="flex w-full text-left items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#f1f2f4]">
+            <p class="text-[#121416] text-sm font-medium leading-normal">Cerrar sesión</p>
+            </a>
+</div>
+    </aside>
+
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <form method="POST" action="{{ url_for('profile.edit_profile') }}">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p class="text-[#121416] tracking-light text-[32px] font-bold leading-tight min-w-72">Perfil</p>
+            </div>
+            <div class="flex p-4 @container">
+                <div class="flex w-full flex-col gap-4 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+                    <div class="flex gap-4 items-center">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-24 w-24" style='background-image: url("https://i.pravatar.cc/150?u={{ user_profile.id }}");'></div>
+                        <div class="flex flex-col justify-center">
+                            <p class="text-[#121416] text-[22px] font-bold leading-tight tracking-[-0.015em]">{{ user_profile.username }}</p>
+                            <p class="text-[#6a7581] text-base font-normal leading-normal">Miembro desde {{ user_profile.created_at.strftime('%B de %Y') }}</p>
+                            <p class="text-[#6a7581] text-base font-normal leading-normal">Reputación: {{ user_profile.reputation }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-[#121416] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Información personal</h2>
+            
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#121416] text-base font-medium leading-normal pb-2">Nombre de usuario</p>
+                    <input name="username" class="form-input rounded-xl" value="{{ user_profile.username }}">
+                </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#121416] text-base font-medium leading-normal pb-2">Nombre completo</p>
+                    <input name="full_name" class="form-input rounded-xl" value="{{ user_profile.full_name or '' }}" placeholder="Añade tu nombre completo">
+                </label>
+            </div>
+            
+            <h2 class="text-[#121416] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Seguridad</h2>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#121416] text-base font-medium leading-normal pb-2">Correo electrónico</p>
+                    <input class="form-input rounded-xl bg-gray-100" value="correo_del_usuario@example.com" disabled>
+                </label>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+                <button type="submit" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#1978e5] text-white text-sm font-bold">
+                    <span class="truncate">Guardar cambios</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module">
+  // --- Lógica para Supabase ---
+  const logoutButton = document.getElementById('logout-button');
+  
+  logoutButton.addEventListener('click', async () => {
+    // Aquí irá tu lógica de Supabase para cerrar sesión del lado del cliente.
+    // await supabase.auth.signOut();
+    // window.location.href = "{{ url_for('main.index') }}";
+    console.log("Botón de cerrar sesión presionado.");
+  });
+</script>
+{% endblock %}
