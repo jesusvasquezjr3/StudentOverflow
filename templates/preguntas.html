@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ question.title }} - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap gap-2 p-4">
+            <a class="text-[#637488] text-base font-medium leading-normal hover:underline" href="{{ url_for('main.index') }}">Preguntas</a>
+            <span class="text-[#637488] text-base font-medium leading-normal">/</span>
+            <span class="text-[#111418] text-base font-medium leading-normal">{{ question.title | truncate(50) }}</span>
+        </div>
+
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">{{ question.title }}</p>
+                <p class="text-[#637488] text-sm font-normal leading-normal">{{ question.body }}</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit" style='background-image: url("https://i.pravatar.cc/150?u={{ question.author.id }}");'></div>
+            <div class="flex flex-col justify-center">
+                <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">{{ question.author.username }}</p>
+                <p class="text-[#637488] text-sm font-normal leading-normal line-clamp-2">Preguntado el {{ question.created_at.strftime('%d de %B, %Y') }}</p>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-4 px-4 py-2">
+            </div>
+
+        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">{{ question.answers.count() }} Respuestas</h2>
+        
+        {% for answer in question.answers %}
+        <div class="border-t border-gray-200">
+            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-fit" style='background-image: url("https://i.pravatar.cc/150?u={{ answer.author.id }}");'></div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">{{ answer.author.username }}</p>
+                    <p class="text-[#637488] text-sm font-normal leading-normal line-clamp-2">Respondido el {{ answer.created_at.strftime('%d de %B, %Y') }}</p>
+                </div>
+            </div>
+            <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">{{ answer.body }}</p>
+            <div class="flex flex-wrap gap-4 px-4 py-2"></div>
+        </div>
+        {% else %}
+            <p class="px-4 text-gray-500">Todavía no hay respuestas para esta pregunta. ¡Sé el primero en ayudar!</p>
+        {% endfor %}
+
+        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Tu Respuesta</h2>
+        <div class="flex items-center px-4 py-3 gap-3">
+            <form method="POST" action="{{ url_for('answers.post_answer', question_id=question.id) }}" class="w-full">
+                <textarea
+                    name="body"
+                    placeholder="Escribe tu respuesta aquí..."
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dce0e5] bg-white focus:border-[#dce0e5] min-h-36 placeholder:text-[#bbc4ce] p-[15px] text-base font-normal leading-normal"
+                    required
+                ></textarea>
+                <div class="flex justify-end mt-4">
+                    <button type="submit" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1978e5] text-white text-sm font-bold">
+                        <span class="truncate">Publicar Respuesta</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
