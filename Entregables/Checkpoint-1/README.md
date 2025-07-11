@@ -16,10 +16,10 @@ Desarrollar una aplicación web full-stack en lenguaje Python en la que hagan us
 ## Prototipo
 Dado que la plataforma está inspirada en **StackOverflow**, he realizado un primer análisis de investigación para conocer algunas de las funciones principales que integra esta plataforma a fin de decidir cuales de incluirían dentro de **StudentOverflow**.
 
-![Inicio StackOverflow](Entregables/Checkpoint-1/stackoverflow_inicio.png)
+![Inicio-StackOverflow](Entregables/Checkpoint-1/stackoverflow_inicio.png)
 ***Figura 1.** Inicio StackOverflow*
 
-![Questions StackOverflow](Entregables/Checkpoint-1/stackoverflow_questions.png)
+![Questions-StackOverflow](Entregables/Checkpoint-1/stackoverflow_questions.png)
 ***Figura 2.** Questions StackOverflow*
 
 Una ves que identifique esas funciones que si o si debería tener un software como **StudentOverflow** procedí a hacer una lista de esas funciones principales que debería tener así como los requerimientos.
@@ -34,9 +34,9 @@ Una ves que identifique esas funciones que si o si debería tener un software co
 
 Por lo que dicho esto me di a la tarea de elaborar una maqueta, mi primera opción fue usar **Figma**, sin embargo, esta a pesar de ser una excelente opción, decidí usar **Stitch** una plataforma recientemente adquirida por **Google**, que se enfoca en diseñar IU (Interfaces de Usuario) con Inteligencia Artificial. [Stitch](https://developers.googleblog.com/es/stitch-a-new-way-to-design-uis/)
 
-![Transform ideas into UI designs with Stitch](https://youtu.be/q39uczIW_MY)
+[![Transform ideas into UI designs with Stitch](https://youtu.be/q39uczIW_MY)]
 
 Finalmente obteniendo una primer maqueta de la página Web.
 
-![Maqueta Inicial](Entregables/Checkpoint-1/Stitch.png)
+![Maqueta-Inicial](Entregables/Checkpoint-1/Stitch.png)
 ***Figura 3.** Maqueta Página Web **Stitch***
