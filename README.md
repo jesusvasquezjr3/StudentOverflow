@@ -1,6 +1,10 @@
 # 🎓 StudentOverflow: Plataforma de Preguntas y Respuestas
 
+[![Hybridge Education](https://img.shields.io/badge/Hybridge-Education-lightgrey)](https://www.hybridge.education)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -100,8 +104,8 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local.
 ### 2\. Clonar el Repositorio
 
 ```bash
-git clone [URL_DE_TU_REPOSITORIO_EN_GITHUB]
-cd [NOMBRE_DEL_DIRECTORIO]
+git clone https://github.com/jesusvasquezjr3/StudentOverflow
+cd StudentOverflow
 ```
 
 ### 3\. Configurar el Entorno Virtual
@@ -164,36 +168,11 @@ La aplicación estará disponible en `http://127.0.0.1:5000`.
 
 -----
 
-## 🌊 Flujo de la Aplicación
+## 🌊 Funcionamiento
 
-A continuación se muestran algunos de los flujos de usuario más importantes.
 
-### Flujo de Registro de Usuario
 
-```mermaid
-graph TD
-    A[Inicio] --> B[Usuario navega a /register];
-    B --> C[Llena formulario];
-    C --> E{¿Datos válidos?};
-    E -- Sí --> G[Llama a Supabase Auth];
-    G --> H{¿Registro exitoso?};
-    H -- Sí --> J[Redirige a /login];
-    J --> K[Fin];
-    E -- No --> C;
-    H -- No --> C;
-```
 
-### Flujo de Publicación de Pregunta
 
-```mermaid
-graph TD
-    A[Usuario autenticado] --> B[Hace clic en 'Preguntar'];
-    B --> D[Llena título, cuerpo y etiquetas];
-    D --> E[Hace clic en 'Publicar'];
-    E --> G{¿Datos válidos?};
-    G -- Sí --> I[INSERT en tabla 'questions'];
-    I --> J[INSERT en tabla 'question_tags'];
-    J --> K[Redirige a la página de la nueva pregunta];
-    K --> L[Fin];
-    G -- No --> D;
-```
+
+
