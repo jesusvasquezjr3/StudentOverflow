@@ -39,7 +39,19 @@ Por lo que dicho esto me di a la tarea de elaborar una maqueta, mi primera opci�
 > Transform ideas into UI designs with Stitch - **Google for Developers**
 > 🎬 Haz clic en la imagen para ver el video en YouTube.
 
-Finalmente obteniendo una primer maqueta de la página Web.
+Así obteniendo una primer maqueta de la página Web.
 
 ![Maqueta-Inicial](Stitch.png)
 ***Figura 3.** Maqueta Página Web **Stitch***
+
+Posteriormente, esta primer maqueta en **HTML** la proceso en VS Code para ajustarla a mis requerimientos.
+
+![VS Code](VS-Code.png)
+***Figura 4.** Edición del **HTML** en Visual Studio Code
+
+Para finalmente tener una primera visualización del sitio:
+
+![Primer Vistazo](HTML.png)
+***Figura 5.** Primer vistazo a la Aplicación*
+
+
