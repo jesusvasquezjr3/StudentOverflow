@@ -10,7 +10,7 @@
 
 ---
 
-## Entregable 3: Grabación de pantalla que muestre la persistencia de la sesión del usuario.
+## Grabación de pantalla que muestre la persistencia de la sesión del usuario.
 
 [![Persistencia de la sesión del usuario - StudentOverflow](https://img.youtube.com/vi/iQpddi7q6Y4/hqdefault.jpg )](https://youtu.be/iQpddi7q6Y4 )
 > *Ver el [Video: Persistencia de la sesión del usuario - StudentOverflow](https://youtu.be/iQpddi7q6Y4)
