@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Formular una Pregunta - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col w-full py-5 max-w-[960px] flex-1 items-center">
+
+        <form method="POST" action="{{ url_for('questions.ask_question') }}" class="w-full max-w-[512px]">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">Formular una pregunta</p>
+            </div>
+            
+            <div class="flex w-full flex-col gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#111418] text-base font-medium leading-normal pb-2">Título</p>
+                    <input
+                        name="title"
+                        placeholder="Sea específico y conciso. Por ejemplo: ¿Cómo instalo Flask en un entorno virtual?"
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dce0e5] bg-white focus:border-[#dce0e5] h-14 placeholder:text-[#637488] p-[15px] text-base font-normal leading-normal"
+                        required
+                    />
+                </label>
+                
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#111418] text-base font-medium leading-normal pb-2">Descripción</p>
+                    <textarea
+                        name="body"
+                        placeholder="Incluya todos los detalles que alguien necesita para responder su pregunta. Añada el código que ha intentado y los errores que ha encontrado."
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dce0e5] bg-white focus:border-[#dce0e5] min-h-36 placeholder:text-[#637488] p-[15px] text-base font-normal leading-normal"
+                        required
+                    ></textarea>
+                </label>
+
+                <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#111418] text-base font-medium leading-normal pb-2">Etiquetas</p>
+                    <select
+                        name="tags"
+                        multiple
+                        class="form-multiselect flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dce0e5] bg-white focus:border-[#dce0e5] min-h-36 placeholder:text-[#637488] p-[15px] text-base font-normal leading-normal"
+                    >
+                        {% for tag in tags %}
+                            <option value="{{ tag.id }}">{{ tag.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <p class="text-xs text-gray-500 mt-1">Mantén presionada la tecla Ctrl (o Cmd en Mac) para seleccionar varias etiquetas.</p>
+                </label>
+            </div>
+
+            <div class="flex px-4 py-3 justify-end">
+                <button
+                    type="submit"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1978e5] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                    <span class="truncate">Publicar Pregunta</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
