@@ -27,15 +27,21 @@ def create_app():
     with app.app_context():
         # Importar modelos después de inicializar db
         from models import Profile
+        from flask_login import current_user
 
         @login_manager.user_loader
         def load_user(user_id):
             return Profile.query.get(user_id)
 
+        # --- SECCIÓN CORREGIDA Y CRUCIAL ---
         @app.before_request
-        def before_request():
-            from flask_login import current_user
+        def before_request_func():
+            """
+            Esta función se ejecuta antes de cada petición.
+            Asigna el usuario actual (autenticado o anónimo) al objeto global 'g'.
+            """
             g.user = current_user
+        # ------------------------------------
 
         # Registrar Blueprints
         from routes.main_routes import main_bp
@@ -46,6 +52,7 @@ def create_app():
         from routes.search_routes import search_bp
         from routes.tags_routes import tags_bp
         from routes.user_routes import user_bp
+        
         app.register_blueprint(main_bp)
         app.register_blueprint(auth_bp)
         app.register_blueprint(questions_bp)
@@ -54,6 +61,7 @@ def create_app():
         app.register_blueprint(search_bp)
         app.register_blueprint(tags_bp)
         app.register_blueprint(user_bp)
+
 
         # Crear tablas si no existen
         db.create_all()
