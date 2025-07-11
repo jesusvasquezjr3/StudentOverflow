@@ -34,7 +34,7 @@ Una ves que identifique esas funciones que si o si debería tener un software co
 
 Por lo que dicho esto me di a la tarea de elaborar una maqueta, mi primera opción fue usar **Figma**, sin embargo, esta a pesar de ser una excelente opción, decidí usar **Stitch** una plataforma recientemente adquirida por **Google**, que se enfoca en diseñar IU (Interfaces de Usuario) con Inteligencia Artificial. [Stitch](https://developers.googleblog.com/es/stitch-a-new-way-to-design-uis/)
 
-[![Transform ideas into UI designs with Stitch](https://youtu.be/q39uczIW_MY)]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q39uczIW_MY?si=VX-rrkQhcPbz38TT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Finalmente obteniendo una primer maqueta de la página Web.
 
