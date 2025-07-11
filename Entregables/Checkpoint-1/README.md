@@ -16,10 +16,10 @@ Desarrollar una aplicación web full-stack en lenguaje Python en la que hagan us
 ## Prototipo
 Dado que la plataforma está inspirada en **StackOverflow**, he realizado un primer análisis de investigación para conocer algunas de las funciones principales que integra esta plataforma a fin de decidir cuales de incluirían dentro de **StudentOverflow**.
 
-![Inicio-StackOverflow](Entregables/Checkpoint-1/stackoverflow_inicio.png)
+![Inicio-StackOverflow](stackoverflow_inicio.png)
 ***Figura 1.** Inicio StackOverflow*
 
-![Questions-StackOverflow](Entregables/Checkpoint-1/stackoverflow_questions.png)
+![Questions-StackOverflow](stackoverflow_questions.png)
 ***Figura 2.** Questions StackOverflow*
 
 Una ves que identifique esas funciones que si o si debería tener un software como **StudentOverflow** procedí a hacer una lista de esas funciones principales que debería tener así como los requerimientos.
@@ -38,5 +38,5 @@ Por lo que dicho esto me di a la tarea de elaborar una maqueta, mi primera opci�
 
 Finalmente obteniendo una primer maqueta de la página Web.
 
-![Maqueta-Inicial](Entregables/Checkpoint-1/Stitch.png)
+![Maqueta-Inicial](Stitch.png)
 ***Figura 3.** Maqueta Página Web **Stitch***
