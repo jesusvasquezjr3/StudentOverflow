@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Comunidad - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Nuestra Comunidad</p>
+                <p class="text-[#637488] text-sm font-normal leading-normal">Explora los perfiles de los miembros más activos y contribuyentes de StudentOverflow.</p>
+            </div>
+        </div>
+
+        <div class="p-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                {% for profile in profiles %}
+                <div class="flex flex-col items-center p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <a href="#" class="mb-4">
+                        <img class="h-24 w-24 rounded-full object-cover" src="https://i.pravatar.cc/150?u={{ profile.id }}" alt="Avatar de {{ profile.username }}">
+                    </a>
+                    
+                    <h3 class="text-lg font-bold text-gray-900">
+                        <a href="#" class="hover:underline">{{ profile.username }}</a>
+                    </h3>
+                    
+                    <p class="text-sm text-gray-500">Reputación: {{ profile.reputation }}</p>
+                    
+                    <p class="text-xs text-gray-400 mt-2">
+                        Miembro desde {{ profile.created_at.strftime('%b %Y') }}
+                    </p>
+                </div>
+                {% else %}
+                    <p class="col-span-full text-center text-gray-500 py-10">No hay usuarios registrados todavía.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
