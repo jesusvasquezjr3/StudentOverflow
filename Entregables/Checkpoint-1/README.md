@@ -36,6 +36,9 @@ Por lo que dicho esto me di a la tarea de elaborar una maqueta, mi primera opci�
 
 [![Stitch](https://img.youtube.com/vi/q39uczIW_MY/0.jpg)](https://www.youtube.com/watch?v=q39uczIW_MY)
 
+> Transform ideas into UI designs with Stitch - **Google for Developers**
+> 🎬 Haz clic en la imagen para ver el video en YouTube.
+
 Finalmente obteniendo una primer maqueta de la página Web.
 
 ![Maqueta-Inicial](Stitch.png)
