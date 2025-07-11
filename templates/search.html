@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Resultados para "{{ query }}" - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#637488] text-base font-normal leading-normal">Resultados de búsqueda para:</p>
+                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">"{{ query }}"</p>
+            </div>
+        </div>
+
+        <div class="pb-3">
+            <div class="flex border-b border-[#dce0e5] px-4 gap-8">
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#111418] text-[#111418] pb-[13px] pt-4" href="#">
+                    <p class="text-sm font-bold">Más Relevantes</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="p-4 flex flex-col gap-4">
+            {% if results %}
+                {% for question in results %}
+                <div class="flex flex-col gap-2 p-4 border border-gray-200 rounded-lg">
+                    <a href="{{ url_for('questions.view_question', question_id=question.id) }}" class="text-[#111418] text-lg font-bold leading-tight hover:underline">
+                        {{ question.title }}
+                    </a>
+                    <p class="text-[#637488] text-sm font-normal leading-normal">
+                        {{ question.body | truncate(250) }}
+                    </p>
+                    <div class="flex items-center justify-between mt-2">
+                        <div class="flex items-center gap-2">
+                            {% for tag in question.tags %}
+                            <a href="{{ url_for('tags.questions_by_tag', tag_name=tag.name) }}" class="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full hover:bg-blue-200">
+                                {{ tag.name }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                        <div class="text-xs text-gray-500">
+                            <span>{{ question.answers.count() }} respuestas</span> • <span>preguntado por {{ question.author.username }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="text-center py-10">
+                    <h3 class="text-lg font-semibold text-gray-700">No se encontraron resultados</h3>
+                    <p class="text-gray-500">Intenta con otros términos de búsqueda o formula una nueva pregunta.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
