@@ -11,6 +11,9 @@
 
 **StudentOverflow** es una aplicación web completa y funcional, inspirada en Stack Overflow, diseñada para que una comunidad de estudiantes pueda hacer preguntas, compartir conocimientos y construir una base de datos de respuestas útiles.
 
+![Inicio](static/images/Inicio.png)
+***Figura 1.** Página de Inicio*
+
 El proyecto está construido con un backend de **Python** usando el micro-framework **Flask**, y se conecta a una base de datos **PostgreSQL** gestionada por **Supabase**, que también maneja la autenticación de usuarios.
 
 ## ✨ Características Principales
@@ -46,6 +49,9 @@ El proyecto utiliza una arquitectura modular basada en el patrón de **Applicati
 │   ├── base.html
 │   ├── index.html
 │   └── ... (y las demás plantillas)
+├── /static
+|   ├── /images
+|   |   ├── logo.png
 └── requirements.txt   \# Dependencias de Python
 
 ````
@@ -88,6 +94,11 @@ erDiagram
     questions }|--|{ question_tags : "etiquetada con"
     tags }|--|{ question_tags : "etiqueta a"
 ````
+
+***Figura 2.** Diagrama de la BD*
+
+![Base de Datos Relacional Supabase](static/supabase-db.png)
+***Figura 3.** Base de Datos SUPABASE*
 
 -----
 
@@ -170,10 +181,26 @@ La aplicación estará disponible en `http://127.0.0.1:5000`.
 
 ## 🌊 Funcionamiento
 
+![Iniciar Sesion](static/images/login.png)
+***Figura 4.** Inicio de Sesión*
 
+![Registro](static/images/register.png)
+***Figura 5.** Crear nuevo usuario*
 
+![Perfil](static/images/perfil.png)
+***Figura 6.** Perfil usuario*
 
+![Etiquetas](static/images/etiquetas.png)
+***Figura 7.** Etiquetas de publicaciones*
 
+![Usuarios](static/images/users.png)
+***Figura 8.** Ver a los usuarios de la plataforma*
+
+![Hacer una pregunta](static/images/preguntar.png)
+***Figura 9. Publicar una Pregunta*
+
+![Buscar](static/images/search.png)
+***Figura 10.** Buscar una pregunta*
 
 ## 📜 Licencia MIT
 Copyright © 2025 Jesús Vásquez - Hybridge Education
