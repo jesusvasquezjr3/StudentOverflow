@@ -175,4 +175,8 @@ La aplicación estará disponible en `http://127.0.0.1:5000`.
 
 
 
+## 📜 Licencia MIT
+Copyright © 2025 Jesús Vásquez - Hybridge Education
+
+Este proyecto es material académico desarrollado como parte del programa educativo de Hybridge Education.
 
