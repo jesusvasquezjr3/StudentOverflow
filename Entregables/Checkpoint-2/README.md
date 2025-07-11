@@ -1,7 +1,5 @@
 # Checkpoint 2: Diseño inicial de la base de datos y flujos de usuario
-Para la creación de la base de datos se hizo uso de **Supabase.**
-
-[Supabase](https://supabase.com/)
+Para la creación de la base de datos se hizo uso de [Supabase](https://supabase.com/).
 
 ## Esquema entidad-relación de la base de datos que utilizará la aplicación
 
@@ -16,9 +14,7 @@ Adicionalmente, para efectos prácticos y para pruebas de funcionalidad se relle
 ---
 
 ## Diagramas de flujo de los distintos casos de uso que los usuarios podrán ejecutar en la plataforma
-Para la creación de cada uno de los diagramas de flujo se uso **Mermaid.**
-
-[Mermaid](https://www.mermaidchart.com/app/dashboard)
+Para la creación de cada uno de los diagramas de flujo se uso [Mermaid](https://www.mermaidchart.com/app/dashboard).
 
 ### 📥 1. Diagrama de Flujo: Registro de un Nuevo Usuario
 Este diagrama muestra el proceso desde que un usuario decide registrarse hasta que se le pide que verifique su correo electrónico.
