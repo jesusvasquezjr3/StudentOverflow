@@ -23,3 +23,6 @@
 ***Figura 4.** REGISTRO Nuevos Usuarios*
 
 ## 2. Grabación de pantalla que muestre el flujo completo de cómo un usuario puede navegar en la plataforma hasta este punto.
+
+[![Flujo de Navegación en la Plataforma - Test 1](https://img.youtube.com/vi/cSdZ-Fa49vU/hqdefault.jpg )](https://youtu.be/cSdZ-Fa49vU )
+> *Ver el [Video](https://youtu.be/cSdZ-Fa49vU)*
