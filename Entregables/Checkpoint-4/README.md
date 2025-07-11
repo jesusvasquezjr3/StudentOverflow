@@ -6,7 +6,7 @@
 ## Grabación de pantalla que muestre el flujo completo de un usuario iniciando sesión en la plataforma.
 
 [![Registro e Inicio de Sesión  -  StudentOverflow](https://img.youtube.com/vi/BJj1dYDBl7w/hqdefault.jpg )](https://youtu.be/BJj1dYDBl7w )
-> *Ver el [Video](https://youtu.be/BJj1dYDBl7w)
+> *Ver el [Video: Registro e Inicio de Sesión  -  StudentOverflow](https://youtu.be/BJj1dYDBl7w)
 
 ---
 
