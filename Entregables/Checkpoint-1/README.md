@@ -47,7 +47,7 @@ Así obteniendo una primer maqueta de la página Web.
 Posteriormente, esta primer maqueta en **HTML** la proceso en VS Code para ajustarla a mis requerimientos.
 
 ![VS Code](VS-Code.png)
-***Figura 4.** Edición del **HTML** en Visual Studio Code
+***Figura 4.** Edición del **HTML** en Visual Studio Code*
 
 Para finalmente tener una primera visualización del sitio:
 
