@@ -32,7 +32,7 @@ Este es el proceso para un usuario que ya tiene una cuenta.
 Este flujo describe los pasos que sigue un usuario autenticado para crear una nueva pregunta.
 
 ![Diagrama 3](Diagrama-3.svg)
-***Figura 5.** Publicar una Nueva Pregunta^*
+***Figura 5.** Publicar una Nueva Pregunta*
 
 ### 💬 4. Diagrama de Flujo: Publicar una Respuesta
 Aquí se muestra cómo un usuario puede responder a una pregunta existente.
