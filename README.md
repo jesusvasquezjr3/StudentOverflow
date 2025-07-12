@@ -9,7 +9,7 @@
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-**StudentOverflow** es una aplicación web completa y funcional, inspirada en Stack Overflow, diseñada para que una comunidad de estudiantes pueda hacer preguntas, compartir conocimientos y construir una base de datos de respuestas útiles.
+**StudentOverflow** es una aplicación web completa y funcional, inspirada en Stack Overflow, diseñada para que una comunidad de estudiantes pueda hacer preguntas, compartir conocimientos y construir una base de datos de respuestas útiles. El diseño de esta aplicación **Full-Stack** corresponde al **Proyecto Final** de la asignatura de **Programación Avanzada** en [Hybridge Education](https://www.hybridge.education).
 
 ![Inicio](static/images/Inicio.png)
 ***Figura 1.** Página de Inicio*
