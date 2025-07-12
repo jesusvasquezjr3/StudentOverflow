@@ -197,7 +197,7 @@ La aplicación estará disponible en `http://127.0.0.1:5000`.
 ***Figura 8.** Ver a los usuarios de la plataforma*
 
 ![Hacer una pregunta](static/images/preguntar.png)
-***Figura 9. Publicar una Pregunta*
+***Figura 9.** Publicar una Pregunta*
 
 ![Buscar](static/images/search.png)
 ***Figura 10.** Buscar una pregunta*
