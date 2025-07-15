@@ -142,8 +142,8 @@ pip install -r requirements.txt
 
 #### a. Crear el Esquema
 
-  * Ve a tu proyecto de Supabase y navega al **SQL Editor**.
-  * Crea **todas las tablas y activa RLS**.
+  * Ve a tu proyecto de Supabase.
+  * Crea **todas las tablas correspondientes y activa RLS**.
 
 #### b. Configurar Variables de Entorno
 
