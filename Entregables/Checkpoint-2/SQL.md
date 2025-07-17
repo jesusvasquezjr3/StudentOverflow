@@ -221,11 +221,7 @@ ALTER TABLE votes ENABLE ROW LEVEL SECURITY;
 
 ```sql
 /****************************************************************
-* *
-* SCRIPT DE POBLACIÓN (VERSIÓN 3 - FINAL) PARA STUDENTOVERFLOW *
-* *
 * Ejecútalo completo en el SQL Editor de Supabase.         *
-* *
 ****************************************************************/
 
 DO $$
